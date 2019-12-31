@@ -1,0 +1,22 @@
+
+section{
+  display: block;
+  width: 100%;
+  height: 930px;
+}
+.section1{
+   background-color: aquamarine;
+ }
+.section2{
+   background-color: palevioletred;
+ }
+.section3{
+   background-color: lightskyblue;
+ }
+.section4{
+   background-color: mediumpurple;
+ }
+footer{
+  height: 300px;
+}
+
