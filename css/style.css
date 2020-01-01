@@ -1,19 +1,17 @@
+@import "default.css";
 
 section {
-	display: block;
-	width: 100%;
+	width:100%;
 	height: 1008px;
-}
-
-.bgImage {
-	width: 100%;
-	opacity: 50%;
-  z-index: -1;
 }
 
 .section1 {
 	background-color: aquamarine;
+	-webkit-box-shadow: inset 0 0 3rem	rgba(0,0,0,0.5);
+	-moz-box-shadow: inset 0 0 3rem	rgba(0,0,0,0.5);
+	box-shadow: inset 0 0 3rem	rgba(0,0,0,0.5);
 }
+
 .section1 h1{
   z-index: 0;
 }
@@ -34,3 +32,12 @@ footer {
 	height: 300px;
 }
 
+.heading{
+	width: fit-content;
+	text-align: center;
+	margin: 0 auto;
+	padding: 0.875rem 0; /*14px 0*/
+	color: #f8f8e8;
+	text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.3); /*2px 2px 4px*/
+	font-size: 1.75rem; /*28px*/
+}
