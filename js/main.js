@@ -9,10 +9,8 @@ const footer = document.querySelector("#footer");
 const IMG_NUMBER = 1;
 
 function paintImg(imgNumber) {
-	const image = new Image();
-	image.src = `./src/${imgNumber}.jpg`;
-	image.classList.add('bgImage');
-	home.prepend(image);
+	home.style.background=`url('./src/${imgNumber}.jpg') no-repeat left top`;
+	home.style.backgroundSize=`100% 100%`;
 }
 
 function genRandom() {
