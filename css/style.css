@@ -41,3 +41,7 @@ footer {
 	text-shadow: 0.125rem 0.125rem 0.25rem rgba(0,0,0,0.3); /*2px 2px 4px*/
 	font-size: 1.75rem; /*28px*/
 }
+
+fa{
+	z-index: 3;
+}
