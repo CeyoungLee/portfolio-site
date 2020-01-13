@@ -1,3 +1,4 @@
+const TXT_SKIP = "skip";
 const TXT_HEADER = "header";
 const TXT_HOME = "home";
 const TXT_ABOUT = "about";
@@ -6,9 +7,23 @@ const TXT_CONTACTS = "contacts";
 const TXT_FOOTER = "footer";
 const body = document.querySelector("body");
 
+function createSkip() {
+  const skip = document.createElement("div");
+  body.appendChild(skip);
+  skip.setAttribute("id",TXT_SKIP);
+  console.log("done");
+}
+function () {
 
-import * as skip from './skip';
-skip.createSkip();
+}
+
+function init() {
+}
+
+init();
+
+
+
 /*
 <div id='skip'>
   <p><a href='#header'>menu</a></p>
