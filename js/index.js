@@ -1,38 +1,69 @@
 const TXT_SKIP = "skip";
-const TXT_HEADER = "header";
-const TXT_HOME = "home";
-const TXT_ABOUT = "about";
-const TXT_WORKS = "works";
-const TXT_CONTACTS = "contacts";
-const TXT_FOOTER = "footer";
+const TXT00 = "header";//nav
+const TXT01 = "main";//sections
+const TXT02 = "footer";
+
+const TXT10 = "home";
+const TXT11 = "about";
+const TXT12 = "works";
+const TXT13 = "contact";
+const TXT14 = "footer";
+const MENU_NUMBER = 5;
 const body = document.querySelector("body");
 
-function createSkip() {
+function skipCreate() {
   const skip = document.createElement("div");
   body.appendChild(skip);
-  skip.setAttribute("id",TXT_SKIP);
-  console.log("done");
+  skip.setAttribute("id", TXT_SKIP);
 }
-function () {
 
+function skipAssign() {
+  const skip = document.getElementById(TXT_SKIP);
+  for (let i = 0; i < MENU_NUMBER; i++) {
+    let TXT_I = eval(`TXT1${i}`);
+    eval(`let skipP${i} = document.createElement(\'p\');
+      let skipA${i} = document.createElement(\'a\');
+      skip.appendChild(skipP${i});
+      skipP${i}.appendChild(skipA${i});
+      skipA${i}.setAttribute(\"href\", \"#${TXT_I}\");
+      skipA${i}.innerHTML = \"${TXT_I}\".toUpperCase();
+    `);
+  }
 }
+
+function skipComplete() {
+  skipCreate();
+  skipAssign();
+}
+
+function headerMainFooterCreate() {
+  console.log('header making start');
+
+  for (let i = 0; i < 3; i++) {
+    let TXT_I;
+    function headerFooter(i) {
+      TXT_I = eval(`TXT0${i}`);
+      console.log(TXT_I);
+      eval(`
+        const ${TXT_I} = document.createElement(\'${TXT_I}\');
+        body.appendChild(${TXT_I});
+        ${TXT_I}.setAttribute("id", \'${TXT_I}\');
+      `);
+    }
+    headerFooter(i);
+  }
+}
+
 
 function init() {
+  skipComplete();
+  headerMainFooterCreate();
 }
 
 init();
 
 
-
 /*
-<div id='skip'>
-  <p><a href='#header'>menu</a></p>
-  <p><a href='#home'>home</a></p>
-  <p><a href='#about'>about</a></p>
-  <p><a href='#works'>works</a></p>
-  <p><a href='#contacts'>contacts</a></p>
-  <p><a href='#footer'>footer</a></p>
-</div>
 <header id="header">
   <nav>
     <ul>
