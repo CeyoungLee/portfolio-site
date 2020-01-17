@@ -9,9 +9,6 @@ export const home = document.querySelector("#home");
 
 const IMG_NUMBER = 1;
 
-
-
-
 function paintImg(imgNumber) {
   home.style.background=`aquamarine url('./src/${imgNumber}.jpg') no-repeat left top`;
   home.style.backgroundSize=`100% 100%`;
